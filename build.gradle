@@ -125,7 +125,7 @@ task processZip(dependsOn: moveJson){}
 sourceSets{
     main{
         java{
-            srcDirs=["src/main/java/de/unitrier/st/core"]
+            srcDirs=["src/main/java/de/unitrier/st/"]
                    
         }
 
@@ -137,3 +137,5 @@ sourceSets {
         compileClasspath+=sourceSets.main.output
     }
 }
+
+  
