@@ -8,12 +8,11 @@
 name: Gradle Package
 
 on:
-  release:
-    types: [created]
+  push:
+    branches: ["Main"]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -28,6 +27,19 @@ jobs:
         distribution: 'temurin'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
+
+    - name: Run Task buildUI
+      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+      with:
+          gradle-version: 7.4.2
+          arguments: buildUI
+
+    - name: Run Task test
+      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+      with:
+          gradle-version: 7.4.2
+          arguments: test
+
 
     - name: Build with Gradle
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
