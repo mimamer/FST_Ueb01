@@ -112,6 +112,17 @@ task moveJson(type:Copy, dependsOn: unpackZip){
 }
 task processZip(dependsOn: moveJson){}
 
+
+sourceSets{
+    main{
+        java{
+            srcDirs=["src/main/java/de/unitrier/st/core"]
+                   
+        }
+
+    }
+}
+
 sourceSets {
     test{
         compileClasspath+=sourceSets.main.output
