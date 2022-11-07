@@ -20,7 +20,7 @@ public class DataTest {
     @Before public void dataLoaderFNFExceptionWorks(){
         DataLoader dataLoader = new DataLoader();
         String json = dataLoader.loadJsonFile("fileNotFound.json");
-        Assert.assertEquals("",json); //easy to trigger a fail if someone wants to test the test
+        Assert.assertEquals("crash",json); //easy to trigger a fail if someone wants to test the test
 
     }
 
