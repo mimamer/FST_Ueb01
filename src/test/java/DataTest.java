@@ -12,10 +12,10 @@ import java.util.Map;
 
 public class DataTest {
 
-    @Test
+    /*@Test
     public void tmpTest() {
         Assert.assertEquals(true, true);
-    }
+    }*/
     @Test
     @Before public void dataLoaderFNFExceptionWorks(){
         DataLoader dataLoader = new DataLoader();
