@@ -111,3 +111,9 @@ task moveJson(type:Copy, dependsOn: unpackZip){
     into newLoc
 }
 task processZip(dependsOn: moveJson){}
+
+sourceSets {
+    test{
+        compileClasspath+=sourceSets.main.output
+    }
+}
