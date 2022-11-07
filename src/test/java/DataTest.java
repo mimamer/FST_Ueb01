@@ -16,12 +16,12 @@ public class DataTest {
     public void tmpTest() {
         Assert.assertEquals(true, true);
     }
-    @Test
+    /*@Test
     public void dataLoaderFNFExceptionWorks(){
         DataLoader dataLoader = new DataLoader();
         String json = dataLoader.loadJsonFile("fileNotFound.json");
         Assert.assertEquals("",json); //easy to trigger a fail if someone wants to test the test
 
-    }
+    }*/
 
 }
