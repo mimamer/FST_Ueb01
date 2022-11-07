@@ -60,11 +60,3 @@ jobs:
     #    USERNAME: ${{ github.actor }}
     #    TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-Notifications:
-  email:
-    recipients:
-      - mimamergen@gmail.com
-      on_success: always
-      on_failure: never
-
-
