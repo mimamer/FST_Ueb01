@@ -41,14 +41,14 @@ jobs:
           arguments: test
 
 
-    - name: Build with Gradle
-      uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
-      env: 
-        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
-      with:
-        gradle-version: 7.4.2
-        arguments: build sonarqube --info
+    #- name: Build with Gradle
+    #  uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+    #  env: 
+    #    GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+    #    SONAR_TOKEN: ${{secrets.SONAR_TOKEN}}
+    #  with:
+    #    gradle-version: 7.4.2
+    #    arguments: build sonarqube --info
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
