@@ -19,9 +19,9 @@ public class DataTest {
     @Test
     @Before public void dataLoaderFNFExceptionWorks(){
         DataLoader dataLoader = new DataLoader();
-        String json = dataLoader.loadJsonFile("fileNotFound.json");
-        Assert.assertEquals("",json); //easy to trigger a fail if someone wants to test the test
-
+        String json = dataLoader.loadJsonFile("countries-aggregated_json.json");
+        //json="" if Exception is executed
+        Assert.assertNotSame("", json); //easy to trigger a fail if someone wants to test the test
     }
 
 }
